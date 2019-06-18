@@ -29,7 +29,7 @@ BiTree createBiTree(char *pre, char *in, int n)//pre存放前序序列，in存�
     node->data = pre[0]; //前序序列的第一个元素一定是根节点
     for(i=0; i<n; i++)
     {
-        //求前序序列中的左子树和右子树
+        //求中序序列中的左子树和右子树
         if((i<=n1)&&(in[i]!=pre[0]))
         {
             lchild_in[n1++]=in[i];
@@ -41,7 +41,7 @@ BiTree createBiTree(char *pre, char *in, int n)//pre存放前序序列，in存�
     }
     for(i=1; i<n; i++)
     {
-        //求中序序列中的左子树和右子树
+        //求先序序列中的左子树和右子树
         if(i<(n1+1))
         {
             lchild_pre[m1++]=pre[i];
